@@ -1,9 +1,11 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import './Card.css'
 
 export const Card = ({quizEle}) => {
   // console.log(quizEle)
   return (
+    <Link to="/quizpage">
     <div className="card-child">
         <div className="card-secondary">
           <div className="card-image-cont">
@@ -20,5 +22,6 @@ export const Card = ({quizEle}) => {
           </div>
         </div>
     </div>
+    </Link>
   );
 };
