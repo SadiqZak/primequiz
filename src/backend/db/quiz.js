@@ -26,41 +26,39 @@ export const Quiz = [
           {
             questionId:5,
             question: "What does Naruto wear before he became a Genin?",
-            answer: "Goggles",
-            options:["Goggles", "Headband", "Shaul", "Shades"],
             options:[{optionAnswer:"Goggles", isCorrect:true , isClicked:false}, {optionAnswer:"Headband", isCorrect:false , isClicked:false}, {optionAnswer:"Shaul", isCorrect:false, isClicked:false }, {optionAnswer:"Shades", isCorrect:false, isClicked:false}]
           }],
     },
-    // {   
-    //     _id:2,
-    //     name: "Attack on Titans",
-    //     cover: require('../../Assets/Attack on titans-2.jpg'),
-    //     questions:[ {
-    //         question: "What is the Japanese name for Attack on Titan?",
-    //         answer: "Shingeki no Kyojin",
-    //         options:["Yu Yu Hakusho" , "Kosaku Shima" , "Shingeki no Kyojin" , "Kimi ni Todoke"]
-    //       },
-    //       {
-    //         question: "Select the real Titans",
-    //         answer: "Colossal Titan",
-    //         options:["Guardian Titan" , "Colossal Titan" , "Monster Titan", "Axe Titan"]
-    //       },
-    //       {
-    //         question: "While in his Pure Titan form, who eats Bertholdt Hoover?",
-    //         answer: "Armin Arlert",
-    //         options:["Reiner Braun" , "Eren Yeager" , "Porco Galliard" , "Armin Arlert"]
-    //       },
-    //       {
-    //         question: "Grisha Yeager stole the Founding Titan from which family before almost wiping them out?",
-    //         answer: "Reiss",
-    //         options:["Tyber" , "Braun" , "Fritz" , "Reiss"]
-    //       },
-    //       {
-    //         question: "Who does Levi team up with to rescue Eren from the Female Titan?",
-    //         answer: "Mikasa Ackerman",
-    //         options:["Mikasa Ackerman" , "Jean Kirschtien" , "Dot Pyxis" , "Kitz Weilman"]
-    //       }],
-    // },
+    {   
+        _id:2,
+        name: "Attack on Titans",
+        cover: require('../../Assets/Attack on titans-2.jpg'),
+        questions:[ {
+            questionId:1,
+            question: "What is the Japanese name for Attack on Titan?",
+            options:[{optionAnswer:"Yu Yu Hakusho", isCorrect:false , isClicked:false}, {optionAnswer:"Kosaku Shima", isCorrect:false , isClicked:false}, {optionAnswer:"Shingeki no Kyojin" , isCorrect:true, isClicked:false }, {optionAnswer:"Kimi ni Todoke", isCorrect:false, isClicked:false}]
+          },
+          {
+            questionId:2,
+            question: "Select the real Titans",
+            options:[{optionAnswer:"Guardian Titan" , isCorrect:false , isClicked:false}, {optionAnswer:"Colossal Titan", isCorrect:true , isClicked:false}, {optionAnswer:"Monster Titan" , isCorrect:false, isClicked:false }, {optionAnswer:"Axe Titan", isCorrect:false, isClicked:false}]
+          },
+          {
+            questionId:3,
+            question: "While in his Pure Titan form, who eats Bertholdt Hoover?",
+            options:[{optionAnswer:"Reiner Braun" , isCorrect:false , isClicked:false}, {optionAnswer:"Eren Yeager" , isCorrect:false , isClicked:false}, {optionAnswer:"Porco Galliard" , isCorrect:false, isClicked:false }, {optionAnswer:"Armin Arlert", isCorrect:true, isClicked:false}]
+          },
+          {
+            questionId:4,
+            question: "Grisha Yeager stole the Founding Titan from which family before almost wiping them out?",
+            options:[{optionAnswer:"Tyber"  , isCorrect:false , isClicked:false}, {optionAnswer:"Braun" , isCorrect:false , isClicked:false}, {optionAnswer:"Fritz" , isCorrect:false, isClicked:false }, {optionAnswer:"Reiss", isCorrect:true, isClicked:false}]
+          },
+          {
+            questionId:5,
+            question: "Who does Levi team up with to rescue Eren from the Female Titan?",
+            options:[{optionAnswer:"Mikasa Ackerman", isCorrect:true , isClicked:false}, {optionAnswer:"Jean Kirschtien" , isCorrect:false , isClicked:false}, {optionAnswer:"Dot Pyxis", isCorrect:false, isClicked:false }, {optionAnswer:"Kitz Weilman", isCorrect:false, isClicked:false}]
+          }],
+    },
     // {   
     //     _id:3,
     //     name: "Luffy",
