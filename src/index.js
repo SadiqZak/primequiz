@@ -10,11 +10,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <QuizProvider>
-        <App />
-      </QuizProvider> 
+    <QuizProvider>
+          <App />
+    </QuizProvider> 
     </Router>
-   
   </React.StrictMode>
 );
 

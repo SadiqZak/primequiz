@@ -1,81 +1,58 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { QuizContext } from "../../Context/quiz-context";
+import { QuizCard } from "./components/QuizCard";
 
 export const QuizPage = () => {
+  const { state, dispatch } = useContext(QuizContext);
+  const navigate = useNavigate()
+  let quizAttr = state.quizData.filter((ele) => ele.name === state.currentQuiz);
+  let currQuiz = quizAttr[0]
+
+  useEffect(()=>{
+    if(quizAttr.length===0){
+        navigate('/')
+    }
+  },[])
+ 
   return (
-    <div className="container-quiz">
+    <>
+      <nav className="nav-home">
+        <Link to="/">
+          <h3>Home</h3>
+        </Link>
+        <Link to="/">
+          <h3>Results</h3>
+        </Link>
+      </nav>
+      <div className="container-quiz">
         <div className="quiz-header">
-            <h2>Questions</h2>
+          <h2>Questions</h2>
         </div>
         <div className="container-secondary-quiz">
-            <div className="quiz-body-center">
+          <div className="quiz-body-center">
+            {
+              <div className="card-child-quiz-page ht-200">
+                <img
+                  className="card-image-quiz"
+                  src={currQuiz?.cover}
+                  alt={currQuiz?.name}
+                />
+              </div>
+            }
 
-                <div className="card-child-quiz-page ht-200">
-                     <img className="card-image-quiz" src="/Assets/Naruto-2.jpg" alt="Naruto"/>  
-                </div>
+            {
+                currQuiz?.questions?.map((ele)=>(
+                   <QuizCard ele={ele}/>
+                ))
+            }
+           
 
-                <div className="card-child-quiz-page ht-300">
-                    <div className="card-quiz-body">
-                        <h2>Naruto Quiz</h2>
-                        <p>Question 1</p>
-                    </div>
-                    <div className="quiz-options">
-                        <div className="quiz-option-child">Option 1</div>
-                        <div className="quiz-option-child">Option 2</div>
-                        <div className="quiz-option-child">Option 3</div>
-                    </div>
-                </div>
-
-                <div className="card-child-quiz-page ht-300">
-                    <div className="card-quiz-body">
-                        <h2>Naruto Quiz</h2>
-                        <p>Question 2</p>
-                    </div>
-                    <div className="quiz-options">
-                        <div className="quiz-option-child">Option 1</div>
-                        <div className="quiz-option-child">Option 2</div>
-                        <div className="quiz-option-child">Option 3</div>
-                    </div>
-                </div>
-
-                <div className="card-child-quiz-page ht-300">
-                    <div className="card-quiz-body">
-                        <h2>Naruto Quiz</h2>
-                        <p>Question 3</p>
-                    </div>
-                    <div className="quiz-options">
-                        <div className="quiz-option-child">Option 1</div>
-                        <div className="quiz-option-child">Option 2</div>
-                        <div className="quiz-option-child">Option 3</div>
-                    </div>
-                </div>
-
-                <div className="card-child-quiz-page ht-300">
-                    <div className="card-quiz-body">
-                        <h2>Naruto Quiz</h2>
-                        <p>Question 4</p>
-                    </div>
-                    <div className="quiz-options">
-                        <div className="quiz-option-child">Option 1</div>
-                        <div className="quiz-option-child">Option 2</div>
-                        <div className="quiz-option-child">Option 3</div>
-                    </div>
-                </div>
-
-                <div className="card-child-quiz-page ht-300">
-                    <div className="card-quiz-body">
-                        <h2>Naruto Quiz</h2>
-                        <p>Question 5</p>
-                    </div>
-                    <div className="quiz-options">
-                        <div className="quiz-option-child">Option 1</div>
-                        <div className="quiz-option-child">Option 2</div>
-                        <div className="quiz-option-child">Option 3</div>
-                    </div>
-                </div>
-                <div className="quiz-option-child wd-100">Submit</div>
-
-            </div>
+           
+            <div className="quiz-option-child wd-100">Submit</div>
+          </div>
         </div>
-    </div>
-  )
-}
+      </div>
+    </>
+  );
+};

@@ -34,6 +34,8 @@
     border: 0.1rem solid var(--lynx-grey);
     box-shadow: 0.3rem 0.3rem 0.1rem rgba(0,0,0,0.2);
     margin: 1rem 0;
+    padding: 1rem;
+    height: max-content;
 }
 
 .card-secondary{
@@ -87,6 +89,11 @@
     padding: 1rem;
     margin: 0.2rem;
     font-weight: bold;
+}
+
+.quiz-option-child.selected{
+    background-color: var(--black-color);
+    color: var(--white-color);
 }
 
 .quiz-option-child:hover{
