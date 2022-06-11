@@ -1,25 +1,7 @@
-import React, { useContext } from "react";
-import { QuizContext } from "../../../../Context/quiz-context";
+import React from "react";
 
-export const QuizCardChild = ({ ele, setOptionClicked, optionClicked }) => {
-  const {dispatch} = useContext(QuizContext)
+export const QuizCardChild = ({ ele, optionHandler }) => {
 
-  const optionHandler = (e) => {
-    // if(!optionClicked){
-    //     dispatch({
-    //         type: "updateClicked",
-    //         payload: { questionAnswer: e.target.value, questionId: ele.questionId },
-    //       });
-    // }else{
-    //     setOptionClicked((prev)=>!prev)
-    // }
-
-    dispatch({
-                type: "updateClicked",
-                payload: { questionAnswer: e.target.value, questionId: ele.questionId },
-               });
-   
-  };
   return (
     <div>
       <input

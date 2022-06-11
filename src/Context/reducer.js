@@ -36,8 +36,7 @@ export const reducerFunc = (state, action)=>{
                     :ele
                 })
             }
-
-            console.log(updateQuizData())
+            
             return{
                 ...state,
                 quizData: updateQuizData()
