@@ -46,9 +46,6 @@ export const QuizPage = () => {
                    <QuizCard ele={ele}/>
                 ))
             }
-           
-
-           
             <div className="quiz-option-child wd-100">Submit</div>
           </div>
         </div>
