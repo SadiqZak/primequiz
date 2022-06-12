@@ -9,6 +9,24 @@ const QuizProvider = ({children})=>{
         currentQuiz:"",
         oriQuiz: [...Quiz],
         quizData: [...Quiz],
+        finalResults:[
+            {name: "Naruto",
+            value:{
+                attempts:0,
+                totalScore:0
+            }},
+            {name:"Titans",
+            value:{
+                attempts:0,
+                totalScore:0
+            }},
+            {name:"Luffy",
+            value:{
+                attempts:0,
+                totalScore:0
+            }}
+        ]
+        
     })
     return(
         <QuizContext.Provider value={{state, dispatch}}>

@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { QuizContext } from "../../../Context/quiz-context";
 import { QuizCardChild } from "./child/QuizCardChild";
 
-export const QuizCard = ({ele, setScore, score}) => {
+export const QuizCard = ({ele}) => {
   const [optionClicked, setOptionClicked] = useState(false);
     const {dispatch} = useContext(QuizContext)
 
@@ -23,7 +23,7 @@ export const QuizCard = ({ele, setScore, score}) => {
       </div>
       <div className="quiz-options">
         {ele.options.map((ele) => (
-          <QuizCardChild ele={ele} optionHandler={optionHandler}/>
+          <QuizCardChild key={ele.questionId} ele={ele} optionHandler={optionHandler}/>
         ))}
       </div>
     </div>

@@ -1,25 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Quiz } from "../../backend/db/quiz";
+import { QuizContext } from "../../Context/quiz-context";
 import "./Navbar.css";
 
 export const Navbar = () => {
+  const {dispatch} = useContext(QuizContext)
   return (
     <nav className="container-nav">
       <div className="logo">
-        <Link to="/">AniQuiz</Link>
+        <Link onClick={()=>dispatch({type:"Reset"})} to="/">AniQuiz</Link>
       </div>
       <div className="nav-right">
         <div>
-          <a className="action-icons" href="./rules.html">
+          <Link to="/" className="action-icons">
             <i className="color-white fa-solid fa-circle-info"></i>
             <p className="color-white">Rules</p>
-          </a>
+          </Link>
         </div>
         <div>
-          <a className="action-icons" href="./rules.html">
+          <Link to="/resultspage" className="action-icons">
             <i className="color-white fa-solid fa-file-lines"></i>
             <p className="color-white">Results</p>
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
