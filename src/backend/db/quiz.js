@@ -59,34 +59,34 @@ export const Quiz = [
             options:[{optionAnswer:"Mikasa Ackerman", isCorrect:true , isClicked:false}, {optionAnswer:"Jean Kirschtien" , isCorrect:false , isClicked:false}, {optionAnswer:"Dot Pyxis", isCorrect:false, isClicked:false }, {optionAnswer:"Kitz Weilman", isCorrect:false, isClicked:false}]
           }],
     },
-    // {   
-    //     _id:3,
-    //     name: "Luffy",
-    //     cover: require('../../Assets/Luffy.jpg'),
-    //     questions:[ {
-    //         question: "When Luffy was younger, he had an idol. What was his idol's name?",
-    //         answer: "Shanks",
-    //         options:["Roronoa Zoro", "Captain Smoker", " Shanks", "Yasopp"]
-    //       },
-    //       {
-    //         question: "What color is luffy's ribbon on his hat?",
-    //         answer: "Red",
-    //         options:["Red", "Orange", "Black", "Green"]
-    //       },
-    //       {
-    //         question: "When does luffy learn gear second?",
-    //         answer: "On the ride to Enies Lobby",
-    //         options:["While fighting Blueno", "On the ride to Enies Lobby", "While fighting Lucci", "While eating meat"]
-    //       },
-    //       {
-    //         question: "Why was Chopper get mad at Caesar? Chose the BEST answer.",
-    //         answer: "Because he is backstabbing his comrades",
-    //         options:["Because he is evil", "Because he is made of gas", "Because he is backstabbing his comrades", "Because he is using children as guinea pigs"]
-    //       },
-    //       {
-    //         question: "In the anime, how does robin and Nami pronounce Chopper?",
-    //         answer: "Choppa",
-    //         options:["Chooper", "Chopper", "Choppa", "Choppla"]
-    //       }],
-    // }
+    {   
+        _id:3,
+        name: "Luffy",
+        cover: require('../../Assets/Luffy.jpg'),
+        questions:[ {
+            questionId:1,
+            question: "When Luffy was younger, he had an idol. What was his idol's name?",
+            options:[{optionAnswer:"Roronoa Zoro", isCorrect:false , isClicked:false}, {optionAnswer:"Captain Smoker" , isCorrect:false , isClicked:false}, {optionAnswer:"Shanks", isCorrect:true, isClicked:false }, {optionAnswer:"Yasopp", isCorrect:false, isClicked:false}]
+          },
+          {
+            questionId:2,
+            question: "What color is luffy's ribbon on his hat?",
+            options:[{optionAnswer:"Red", isCorrect:true , isClicked:false}, {optionAnswer:"Orange" , isCorrect:false , isClicked:false}, {optionAnswer:"Black", isCorrect:false, isClicked:false }, {optionAnswer:"Green", isCorrect:false, isClicked:false}]
+          },
+          {
+            questionId:3,
+            question: "When does luffy learn gear second?",
+            options:[{optionAnswer:"While fighting Blueno", isCorrect:false , isClicked:false}, {optionAnswer:"On the ride to Enies Lobby" , isCorrect:true , isClicked:false}, {optionAnswer:"While fighting Lucci", isCorrect:false, isClicked:false }, {optionAnswer:"While eating meat", isCorrect:false, isClicked:false}]
+          },
+          {
+            questionId:4,
+            question: "Why was Chopper get mad at Caesar? Chose the BEST answer.",
+            options:[{optionAnswer:"Because he is evil", isCorrect:false , isClicked:false}, {optionAnswer:"Because he is made of gas" , isCorrect:false , isClicked:false}, {optionAnswer:"Because he is backstabbing his comrades", isCorrect:true, isClicked:false }, {optionAnswer:"Because he is using children as guinea pigs", isCorrect:false, isClicked:false}]
+          },
+          {
+            questionId:5,
+            question: "In the anime, how does robin and Nami pronounce Chopper?",
+            options:[{optionAnswer:"Chooper", isCorrect:false , isClicked:false}, {optionAnswer:"Chopper" , isCorrect:false , isClicked:false}, {optionAnswer:"Choppa", isCorrect:true, isClicked:false }, {optionAnswer:"Choppla", isCorrect:false, isClicked:false}]
+          }],
+    }
 ]
