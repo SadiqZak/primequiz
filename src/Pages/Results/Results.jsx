@@ -1,10 +1,16 @@
 import React, { useContext } from "react";
+import {Link} from 'react-router-dom'
 import { QuizContext } from "../../Context/quiz-context";
 
 export const Results = () => {
-    const {state}= useContext(QuizContext)
+    const {state, dispatch}= useContext(QuizContext)
   return (
     <div>
+       <nav className="nav-home">
+            <Link onClick={()=>dispatch({ type: "Reset" })} to="/">
+              <h3>Home</h3>
+            </Link>
+          </nav>
       <div className="quiz-header-rules">
         <p className="quiz-header-tag">Final Results</p>
         <div className="card-child-quiz-page ht-200">
