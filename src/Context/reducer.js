@@ -8,7 +8,7 @@ export const reducerFunc = (state, action)=>{
                 ...state, currentQuiz: action.type
             }
         }
-        case "Attack on Titans":{
+        case "Titans":{
             return{
                 ...state, currentQuiz: action.type
             }
@@ -42,9 +42,24 @@ export const reducerFunc = (state, action)=>{
                 quizData: updateQuizData()
             }
         }
-        // case "Submit":{
-        //     return{}
-        // }
+        case "Submit":{
+            const updateFinalResults = ()=>{
+                return [...state.finalResults].map((ele)=>{
+                    return ele.name === state.currentQuiz ? {
+                        ...ele, value:{
+                           ...ele.value, 
+                           totalScore: ele.value.totalScore + action.payload.totalScore,
+                           attempts: ele.value.attempts+1
+                        }
+                    }:ele
+                })
+            }
+            console.log(updateFinalResults())
+            return{
+                ...state,
+                finalResults: updateFinalResults()
+            }
+        }
         case "Reset":{
             return{
                 ...state,

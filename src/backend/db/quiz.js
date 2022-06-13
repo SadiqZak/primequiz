@@ -31,7 +31,7 @@ export const Quiz = [
     },
     {   
         _id:2,
-        name: "Attack on Titans",
+        name: "Titans",
         cover: require('../../Assets/Attack on titans-2.jpg'),
         questions:[ {
             questionId:1,

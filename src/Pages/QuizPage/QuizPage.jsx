@@ -17,24 +17,30 @@ export const QuizPage = () => {
     if (quizAttr.length === 0) {
       navigate("/");
     }
-  }, []);
+
+    if(submit){
+      dispatch({ type: "Submit", payload:{totalScore: score, currentQuiz: state.currentQuiz }});
+    }
+  }, [submit]);
+
+ 
 
   const submitClickHandler = () => {
     setSubmit((prev) => !prev);
-    dispatch({ type: "Submit", payload: score });
     currQuiz.questions.map((question)=>{
       question.options.map((optionAnswer)=>{
         return optionAnswer.isCorrect && optionAnswer.isClicked === true ? setScore((prev)=>prev+1): false
       })
-
     })
-  };
+    }
+
 
   const ResetClickHandler = () => {
     setSubmit((prev) => !prev);
     dispatch({ type: "Reset" });
     setScore(0)
   };
+
   return (
     <>
       {!submit && (
@@ -61,7 +67,7 @@ export const QuizPage = () => {
                 }
 
                 {currQuiz?.questions?.map((ele) => (
-                  <QuizCard ele={ele} />
+                  <QuizCard key={ele._id} ele={ele} />
                 ))}
                 <button
                   onClick={submitClickHandler}
