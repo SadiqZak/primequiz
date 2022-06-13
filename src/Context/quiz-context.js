@@ -7,6 +7,7 @@ const QuizContext = createContext()
 const QuizProvider = ({children})=>{
     const [state, dispatch] = useReducer(reducerFunc, {
         currentQuiz:"",
+        oriQuiz: [...Quiz],
         quizData: [...Quiz],
     })
     return(

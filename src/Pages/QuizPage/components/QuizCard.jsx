@@ -2,12 +2,11 @@ import React, { useState, useContext } from "react";
 import { QuizContext } from "../../../Context/quiz-context";
 import { QuizCardChild } from "./child/QuizCardChild";
 
-export const QuizCard = ({ele}) => {
+export const QuizCard = ({ele, setScore, score}) => {
   const [optionClicked, setOptionClicked] = useState(false);
     const {dispatch} = useContext(QuizContext)
 
   const optionHandler = (e) => {
-    console.log(e.target.value)
     setOptionClicked(true)
     if(!optionClicked){
         dispatch({

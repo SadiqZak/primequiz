@@ -40,7 +40,7 @@ export const Quiz = [
           },
           {
             questionId:2,
-            question: "Select the real Titans",
+            question: "Select the real Titan",
             options:[{optionAnswer:"Guardian Titan" , isCorrect:false , isClicked:false}, {optionAnswer:"Colossal Titan", isCorrect:true , isClicked:false}, {optionAnswer:"Monster Titan" , isCorrect:false, isClicked:false }, {optionAnswer:"Axe Titan", isCorrect:false, isClicked:false}]
           },
           {

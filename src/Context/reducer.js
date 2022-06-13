@@ -42,6 +42,15 @@ export const reducerFunc = (state, action)=>{
                 quizData: updateQuizData()
             }
         }
+        // case "Submit":{
+        //     return{}
+        // }
+        case "Reset":{
+            return{
+                ...state,
+                quizData: state.oriQuiz
+            }
+        }
         default:{
             return state
         }

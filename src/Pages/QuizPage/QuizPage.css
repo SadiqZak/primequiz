@@ -1,0 +1,20 @@
+.quiz-answer-child{
+    width: 100%;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: 0.1rem solid var(--lynx-grey);
+    text-align: center;
+    padding: 1rem;
+    margin: 0.2rem;
+    font-weight: bold;
+}
+
+.quiz-answer-child.correct{
+    background-color: green;
+    color: white;
+}
+
+.quiz-answer-child.wrong{
+    background-color: red;
+    color: white;
+}
