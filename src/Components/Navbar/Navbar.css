@@ -1,0 +1,30 @@
+.container-nav{
+    padding: 2rem;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight: 500;
+}
+
+.nav-right{
+    font-size:1.5rem;
+    font-weight: 500;
+    display: flex;
+    gap: 1rem;
+}
+
+.logo a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.action-icons{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
