@@ -24,7 +24,7 @@ export const Results = () => {
         </div>
         <div className="card-child-quiz-page ht-200">
           <div className="card-quiz-body">
-            <h2>Luffy Quiz</h2>
+            <h2>Titans Quiz</h2>
           </div>
           <div className="quiz-options">
           <p>No. of attempts:{state.finalResults[1]?.value?.attempts}</p>
@@ -33,7 +33,7 @@ export const Results = () => {
         </div>
         <div className="card-child-quiz-page ht-200">
           <div className="card-quiz-body">
-            <h2>Titan Quiz</h2>
+            <h2>Luffy Quiz</h2>
           </div>
           <div className="quiz-options">
           <p>No. of attempts:{state.finalResults[2]?.value?.attempts}</p>
