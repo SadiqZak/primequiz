@@ -13,7 +13,7 @@ export const Navbar = () => {
       </div>
       <div className="nav-right">
         <div>
-          <Link to="/" className="action-icons">
+          <Link to="/rulespage" className="action-icons">
             <i className="color-white fa-solid fa-circle-info"></i>
             <p className="color-white">Rules</p>
           </Link>
