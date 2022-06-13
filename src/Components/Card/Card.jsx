@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import {Link} from "react-router-dom";
+import { QuizContext } from "../../Context/quiz-context";
 import './Card.css'
 
 export const Card = ({quizEle}) => {
-  // console.log(quizEle)
+  const {dispatch} = useContext(QuizContext)
+
   return (
+    <Link onClick={()=>dispatch({type:`${quizEle.name}`})} to="/quizpage">
     <div className="card-child">
         <div className="card-secondary">
           <div className="card-image-cont">
@@ -20,5 +24,6 @@ export const Card = ({quizEle}) => {
           </div>
         </div>
     </div>
+    </Link>
   );
 };

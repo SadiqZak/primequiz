@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Quiz } from "../../backend/db/quiz";
 import { Card } from "../../Components/Card/Card";
 import "./Home.css";
 
 export const Home = () => {
+
   return (
     <div>
       <div className="quiz-header">
